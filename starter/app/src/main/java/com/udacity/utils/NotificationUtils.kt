@@ -34,7 +34,7 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     val notificationBuilder = NotificationCompat.Builder(applicationContext, applicationContext.getString(R.string.githubRepo_notification_channel_id))
 
             .setSmallIcon(R.drawable.ic_assistant_black_24dp)
-            .setContentTitle("Download Complete")
+            .setContentTitle("Download Complete - $status" )
             .setContentText(messageBody)
             .setContentIntent(contentPendingIntent)
             .setAutoCancel(true)
